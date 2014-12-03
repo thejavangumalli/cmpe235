@@ -121,95 +121,104 @@
             <label id="configure_points"><b>Configure Points<b></label>
               <hr>
               <form>
-                <div data-role="fieldcontain">
-                  <label for="hw_points">Homeworks</label>
-                  <input type="range" name="hw_points" id="hw_points" data-clear-btn="true" min="0" max="500"  value="500" data-highlight="true" step="1" data-popup-enabled="true" />
-                </div>
-                <div data-role="fieldcontain">
-                  <label for="lab_points">Labs</label>
-                  <input type="range" name="lab_points" id="lab_points" data-clear-btn="true" min="0" max="500"  value="500" data-highlight="true" step="1" data-popup-enabled="true" />
-                </div>
-                <div data-role="fieldcontain">
-                  <label for="proj_points">Project</label>
-                  <input type="range" name="proj_points" id="proj_points" data-clear-btn="true" min="0" max="100"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
-                </div>
-                <div data-role="fieldcontain">
-                  <label for="present_points">Presentation</label>
-                  <input type="range" name="present_points" id="present_points" data-clear-btn="true" min="0" max="100"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
-                </div>
-                <div data-role="fieldcontain">
-                  <label for="mid_points">Midterm</label>
-                  <input type="range" name="mid_points" id="mid_points" data-clear-btn="true" min="0" max="100"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
-                </div>
-                <div data-role="fieldcontain">
-                  <label for="final_points">Final</label>
-                  <input type="range" name="final_points" id="final_points" data-clear-btn="true" min="0" max="100"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
-                </div>
-              </form>
-              <br>
-              <label id="configure_scaling_factor"><b>Configure Scaling Factors<b></label>
+                    <input type="number" name="gradeCutOff" id="gradeCutOff" value="" placeholder="Grade Cutoff at">
+                        <p style="text-align: center;">
+                        <a href="#" id='saveSettings' data-role="button" data-inline="true" data-icon="check">Save</a>
+                        </p>
+                </form>
+                <br>
+                <label id="configure_points"><b>Configure Points<b></label>
                 <hr>
                 <form>
-                  <div data-role="fieldcontain">
-                    <label for="hw_sf">Homeworks</label>
-                    <input type="range" name="hw_sf" id="hw_sf" data-clear-btn="true" min="0" max="100"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
-                  </div>
-                  <div data-role="fieldcontain">
-                    <label for="lab_sf">Labs</label>
-                    <input type="range" name="lab_sf" id="lab_sf" data-clear-btn="true" min="0" max="100"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
-                  </div>
-                  <div data-role="fieldcontain">
-                    <label for="proj_sf">Project</label>
-                    <input type="range" name="proj_sf" id="proj_sf" data-clear-btn="true" min="0" max="100"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
-                  </div>
-                  <div data-role="fieldcontain">
-                    <label for="present_sf">Presentation</label>
-                    <input type="range" name="present_sf" id="present_sf" data-clear-btn="true" min="0" max="100"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
-                  </div>
-                  <div data-role="fieldcontain">
-                    <label for="mid_sf">Midterm</label>
-                    <input type="range" name="mid_sf" id="mid_sf" data-clear-btn="true" min="0" max="100"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
-                  </div>
-                  <div data-role="fieldcontain">
-                    <label for="final_sf">Final</label>
-                    <input type="range" name="final_sf" id="final_sf" data-clear-btn="true" min="0" max="100"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
-                  </div>
+                    <div data-role="fieldcontain">
+                        <label for="hw_points">Homeworks</label>
+                        <input type="range" name="hw_points" id="hw_points" data-clear-btn="true" min="0" max="500"  value="500" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="lab_points">Labs</label>
+                        <input type="range" name="lab_points" id="lab_points" data-clear-btn="true" min="0" max="500"  value="200" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="proj_points">Project</label>
+                        <input type="range" name="proj_points" id="proj_points" data-clear-btn="true" min="0" max="500"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="present_points">Presentation</label>
+                        <input type="range" name="present_points" id="present_points" data-clear-btn="true" min="0" max="500"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="mid_points">Midterm</label>
+                        <input type="range" name="mid_points" id="mid_points" data-clear-btn="true" min="0" max="500"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="final_points">Final</label>
+                        <input type="range" name="final_points" id="final_points" data-clear-btn="true" min="0" max="500"  value="100" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                </form>
+                <br>
+                <label id="configure_scaling_factor"><b>Configure Scaling Factors<b></label>
+                <hr>
+                <form>
+                    <div data-role="fieldcontain">
+                        <label for="hw_sf">Homeworks</label>
+                        <input type="range" name="hw_sf" id="hw_sf" data-clear-btn="true" min="0" max="100"  value="10" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="lab_sf">Labs</label>
+                        <input type="range" name="lab_sf" id="lab_sf" data-clear-btn="true" min="0" max="100"  value="40" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="proj_sf">Project</label>
+                        <input type="range" name="proj_sf" id="proj_sf" data-clear-btn="true" min="0" max="100"  value="20" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="present_sf">Presentation</label>
+                        <input type="range" name="present_sf" id="present_sf" data-clear-btn="true" min="0" max="100"  value="10" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="mid_sf">Midterm</label>
+                        <input type="range" name="mid_sf" id="mid_sf" data-clear-btn="true" min="0" max="100"  value="10" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="final_sf">Final</label>
+                        <input type="range" name="final_sf" id="final_sf" data-clear-btn="true" min="0" max="100"  value="10" data-highlight="true" step="1" data-popup-enabled="true" />
+                    </div>
                 </form>
                 <br>
                 <label id="configure_grades"><b>Configure Grades<b></label>
-                  <hr>
-                  <form>
+                <hr>
+                <form>
                     <div data-role="rangeslider">
                       <label for="Agrade-1a">Rangeslider:</label>
-                      <input name="Agrade-1a" id="Agrade-1a" min="0" max="100" value="0" type="range" step="1" data-popup-enabled="true" />
+                      <input name="Agrade-1a" id="Agrade-1a" min="0" max="100" value="90" type="range" step="1" data-popup-enabled="true" />
                       <label for="Agrade-1b">Rangeslider:</label>
                       <input name="Agrade-1b" id="Agrade-1b" min="0" max="100" value="100" type="range" step="1" data-popup-enabled="true" />
                     </div>
                     <div data-role="rangeslider">
                       <label for="Bgrade-1a">Rangeslider:</label>
-                      <input name="Bgrade-1a" id="Bgrade-1a" min="0" max="100" value="0" type="range" step="1" data-popup-enabled="true" />
+                      <input name="Bgrade-1a" id="Bgrade-1a" min="0" max="100" value="80" type="range" step="1" data-popup-enabled="true" />
                       <label for="Bgrade-1b">Rangeslider:</label>
-                      <input name="Bgrade-1b" id="Bgrade-1b" min="0" max="100" value="100" type="range" step="1" data-popup-enabled="true" />
+                      <input name="Bgrade-1b" id="Bgrade-1b" min="0" max="100" value="89" type="range" step="1" data-popup-enabled="true" />
                     </div>
                     <div data-role="rangeslider">
                       <label for="Cgrade-1a">Rangeslider:</label>
-                      <input name="Cgrade-1a" id="Cgrade-1a" min="0" max="100" value="0" type="range" step="1" data-popup-enabled="true" />
+                      <input name="Cgrade-1a" id="Cgrade-1a" min="0" max="100" value="70" type="range" step="1" data-popup-enabled="true" />
                       <label for="Cgrade-1b">Rangeslider:</label>
-                      <input name="Cgrade-1b" id="Cgrade-1b" min="0" max="100" value="100" type="range" step="1" data-popup-enabled="true" />
+                      <input name="Cgrade-1b" id="Cgrade-1b" min="0" max="100" value="79" type="range" step="1" data-popup-enabled="true" />
                     </div>
                     <div data-role="rangeslider">
                       <label for="Dgrade-1a">Rangeslider:</label>
-                      <input name="Dgrade-1a" id="Dgrade-1a" min="0" max="100" value="0" type="range" step="1" data-popup-enabled="true" />
+                      <input name="Dgrade-1a" id="Dgrade-1a" min="0" max="100" value="60" type="range" step="1" data-popup-enabled="true" />
                       <label for="Dgrade-1b">Rangeslider:</label>
-                      <input name="Dgrade-1b" id="Dgrade-1b" min="0" max="100" value="100" type="range" step="1" data-popup-enabled="true" />
+                      <input name="Dgrade-1b" id="Dgrade-1b" min="0" max="100" value="69" type="range" step="1" data-popup-enabled="true" />
                     </div>
                     <div data-role="rangeslider">
                       <label for="Fgrade-1a">Rangeslider:</label>
                       <input name="Fgrade-1a" id="Fgrade-1a" min="0" max="100" value="0" type="range" step="1" data-popup-enabled="true" />
                       <label for="Fgrade-1b">Rangeslider:</label>
-                      <input name="Fgrade-1b" id="Fgrade-1b" min="0" max="100" value="100" type="range" step="1" data-popup-enabled="true" />
+                      <input name="Fgrade-1b" id="Fgrade-1b" min="0" max="100" value="59" type="range" step="1" data-popup-enabled="true" />
                     </div>
-                  </form>
+                </form>
                 </div>
               </div>
 
