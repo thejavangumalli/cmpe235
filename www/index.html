@@ -9,6 +9,7 @@
                 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
                 <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
                 <script src="js/app.js"></script>
+                <link rel="stylesheet" href="css/index.css" />
                 </head>
 
 
@@ -18,50 +19,115 @@
                 <h1>Login</h1>
             </div>
             <div data-role="content">
-                <form>
-                    <div data-role="fieldcontain">
-                      <h2 style="color:red;" id="error"></h2>
-                        <label>Id</label>
-                        <input type="text" name="username" id="username" data-clear-btn="true" maxlength="4" value="" placeholder="Enter Id here">
-                        <label>Password</label>
-                        <input type="password" name="password" id="password" data-clear-btn="true" maxlength="20" value="" placeholder="Enter password">
+                <form style="margin-top:5rem;">
+                    <div>
+                      <h2 style="color:#FFFFCC;" id="error"></h2>
+                      <div data-role="fieldcontain">
+                        <label for="username" style="padding-right:1rem;">User Id</label>
+                        <input type="text" name="username" id="username" data-clear-btn="true" maxlength="4" data-theme="c" value="" placeholder="Enter Id here" required>
+                      </div>
+                      <div data-role="fieldcontain">
+                        <label for="password" style="padding-right:1rem;">Password</label>
+                        <input type="password" name="password" id="password" data-clear-btn="true" maxlength="20" data-theme="c" value="" placeholder="Enter password" required>
+                      </div>
                     </div>
-                    <p style="text-align: center;">
-                        <input type="button" id="login" data-role="button" data-icon="check" value="Login">
-                    </p>
+                    <div style="margin-left:4.5rem">
+                        <input type="button" id="login" data-role="button" data-theme="b" data-inline="true" data-icon="check" value="Login">
+                    </div>
                 </form>
             </div>
+        </div>
+        <div data-role="page" class="" id="studentMainPage">
+          <div data-role="header" class="">
+            <h1>Grade Factory</h1>
+          </div>
+          <div data-role="content" class="">
+            <form>
+              <div data-role="fieldcontain">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname"  name="firstname" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label for=>Last Name:</label>
+                <input type="text" id="lastname" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label>Email:</label>
+                <input type="text" id="email" data-theme="c" readonly>
+              <div>
+              <div data-role="fieldcontain">
+                <label>Phone:</label>
+                <input type="text" id="phone" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label>ID:</label>
+                <input type="text" id="id-info"  data-theme="c" readonly>
+              <div>
+                <div data-role="fieldcontain">
+                <label>Course Description:</label>
+                <input type="text" id="course-description" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label for="homework">Homework:</label>
+                <input type="text" id="homeworks" data-theme="c" readonly>
+                </div>
+              <div data-role="fieldcontain">
+                <label for="lab">Lab:</label>
+                <input type="text" id="labs" data-theme="c" readonly>
+                </div>
+              <div data-role="fieldcontain">
+                <label for="midterm">Midterm:</label>
+                <input type="text" id="midterm" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label for="presentation">Presentation:</label>
+                <input type="text" id="presentation" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label for="project">Project:</label>
+                <input type="text" id="project" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label for="final">Final:</label>
+                <input type="text" id="final" data-theme="c" readonly>
+                </div>
+                <div data-role="fieldcontain">
+                <label>Final Grade:</label>
+                <input type="text" id="finalgrade" data-theme="c" readonly>
+              </div>
+            </form>
+          </div>
         </div>
         <div data-role="page" class="" id="mainPage">
           <div data-role="header" class="">
             <h1>Grade Factory</h1>
             <a href="#settingsPage" id='settingsButton' class="ui-btn-right" data-role="button" data-icon="gear">Settings</a>
           </div>
-          <div data-role="content" class="">
-            <p class="fname">
+        <div data-role="content" class="">
+            <div data-role="fieldcontain">
               <label for="firstname">First Name:</label>
               <span id="firstname"  name="firstname">TBD</span>
-            </p>
-            <p class="lname">
+            </div>
+            <div data-role="fieldcontain">
               <label for=>Last Name:</label>
               <span id="lastname">TBD</span>
-            </p>
-            <p class="email">
+            </div>
+            <div data-role="fieldcontain">
               <label>Email:</label>
               <span id="email">TBD</span>
-            </p>
-            <p class="phone">
+            <div>
+            <div data-role="fieldcontain">
               <label>Phone:</label>
               <span id="phone">TBD</span>
-            </p>
-            <p class="id info">
+            </div>
+            <div data-role="fieldcontain">
               <label>ID:</label>
               <span id="id-info">TBD</span>
-            </p>
-            <p class="course description">
-              <label>Course Description:</label>
-              <span id="course-description">TBD</span>
-            </p>
+            <div>
+            <div data-role="fieldcontain">
+                <label>Course Description:</label>
+                <span id="course-description">TBD</span>
+            </div>
             <form>
               <div data-role="fieldcontain">
                 <label for="student-id">Student Id</label>
@@ -105,6 +171,8 @@
             </form>
           </div>
         </div>
+
+
         <div data-role="page" class="" id="settingsPage" data-add-back-btn="true" >
           <div data-role="header" class="">
             <a href="#" id='cancelSettings' class="ui-btn ui-icon-delete ui-btn-icon-left" data-rel="back">Cancel</a>
