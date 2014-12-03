@@ -26,6 +26,10 @@
                 $('#presentation').val(result.presentation);
                 $('#project').val(result.project);
                 $('#final').val(result.final);
+                $.getJSON('http://vangumalli.com/project/class_description.php?callback=?',
+                  'class_id=235',function(classResult){
+                    $('#class-description').val(classResult.class_description);
+                  });
                 var type = result.type; //1 = student; 2= professor
                 if(type == 1)
                   {

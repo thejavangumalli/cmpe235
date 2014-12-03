@@ -44,6 +44,10 @@ body {
   background: transparent;
   margin-left:2rem;
 }
+.ui-header{
+    background:transparent;
+    margin-top:20px;
+}
 .ui-overlay-a{
   text-shadow:none;
   color:#E4E3E3;

@@ -1,0 +1,2 @@
+ALTER TABLE  `class` ADD  `class_description` VARCHAR( 10000 ) NOT NULL AFTER  `class_name`;
+UPDATE  `class` SET  `class_description` = 'Study of wireless-based software systems in design and engineering, underlying networks, infrastructures and frameworks, wireless security, mobile user security & privacy (i.e. biometric security), emergent mobile programming platforms and technologies (such as RFID/Barcode/NFC), mobile commerce and service application systems. Prerequisite: CMPE 220 or CMPE 202 or instructor consent.' WHERE  `class`.`class_id` =235 LIMIT 1;

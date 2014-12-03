@@ -1,10 +1,5 @@
 <?php
-$servername = "mysql";
-$username = "theja";
-$password = "rockerz";
-$dbname = "cmpe235";
-$conn = new mysqli($servername, $username, $password, $dbname);
-
+include 'conn.php';
 $username = $_GET['username'];
 $password = $_GET['password'];
 $query="SELECT id,firstname,lastname,phone,email,type from user where id =".$username." and password=".$password;
