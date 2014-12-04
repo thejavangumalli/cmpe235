@@ -37,7 +37,8 @@
                 </form>
             </div>
         </div>
-        <div data-role="page" class="" id="studentMainPage">
+
+        <div data-role="page" id="studentMainPage">
           <div data-role="header" data-theme="c" data-position="fixed">
             <h1>Grade Factory</h1>
           </div>
@@ -98,80 +99,78 @@
             </form>
           </div>
         </div>
-        <div data-role="page" class="" id="mainPage">
-          <div data-role="header" class="">
+
+        <div data-role="page"  id="mainPage">
+          <div data-role="header">
             <h1>Grade Factory</h1>
             <a href="#settingsPage" id='settingsButton' class="ui-btn-right" data-role="button" data-icon="gear">Settings</a>
           </div>
-        <div data-role="content" class="">
-            <div data-role="fieldcontain">
-              <label for="firstname">First Name:</label>
-              <span id="firstname"  name="firstname">TBD</span>
-            </div>
-            <div data-role="fieldcontain">
-              <label for=>Last Name:</label>
-              <span id="lastname">TBD</span>
-            </div>
-            <div data-role="fieldcontain">
-              <label>Email:</label>
-              <span id="email">TBD</span>
-            <div>
-            <div data-role="fieldcontain">
-              <label>Phone:</label>
-              <span id="phone">TBD</span>
-            </div>
-            <div data-role="fieldcontain">
-              <label>ID:</label>
-              <span id="id-info">TBD</span>
-            <div>
-            <div data-role="fieldcontain">
-                <label>Course Description:</label>
-                <span id="course-description">TBD</span>
-            </div>
+
+          <div data-role="content" class="">
             <form>
               <div data-role="fieldcontain">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname_prof"  name="firstname" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label for=>Last Name:</label>
+                <input type="text" id="lastname_prof" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label>Email:</label>
+                <input type="text" id="email_prof" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label>Phone:</label>
+                <input type="text" id="phone_prof" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label>ID:</label>
+                <input type="text" id="id-info_prof"  data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
+                <label>Class Description:</label>
+                <input type="text" id="class-description_prof" data-theme="c" readonly>
+              </div>
+              <div data-role="fieldcontain">
                 <label for="student-id">Student Id</label>
-                <input type="number" name="student-id" id="student-id" data-clear-btn="true" maxlength="4" value="" placeholder="Enter student id here">
+                <input type="text" id="student-id_prof" data-theme="c">
               </div>
               <div data-role="fieldcontain">
-                <label for="class-id">Class-id</label>
-                <input type="number" name="class-id" id="class-id" data-clear-btn="true" maxlength="3" value="" placeholder="Enter class id here">
+                <label for="homework">Homework:</label>
+                <input type="text" id="homeworks_prof" data-theme="c">
               </div>
               <div data-role="fieldcontain">
-                <label for="homework">Homework</label>
-                <input type="number" name="homework" id="homework" data-clear-btn="true" maxlength="4" value="" placeholder="Enter homework points here">
+                <label for="lab">Lab:</label>
+                <input type="text" id="labs_prof" data-theme="c">
               </div>
               <div data-role="fieldcontain">
-                <label for="lab">Lab</label>
-                <input type="number" name="lab" id="lab" data-clear-btn="true" maxlength="4" value="" placeholder="Enter lab points here">
+                <label for="midterm">Midterm:</label>
+                <input type="text" id="midterm_prof" data-theme="c">
               </div>
               <div data-role="fieldcontain">
-                <label for="midterm">Midterm</label>
-                <input type="number" name="midterm" id="midterm" data-clear-btn="true" maxlength="4" value="" placeholder="Enter midterm points here">
+                <label for="presentation">Presentation:</label>
+                <input type="text" id="presentation_prof" data-theme="c">
               </div>
               <div data-role="fieldcontain">
-                <label for="presentation">Presentation</label>
-                <input type="number" name="presentation" id="presentation" data-clear-btn="true" maxlength="4" value="" placeholder="Enter presentation points here">
+                <label for="project">Project:</label>
+                <input type="text" id="project_prof" data-theme="c">
               </div>
               <div data-role="fieldcontain">
-                <label for="project">Project</label>
-                <input type="number" name="project" id="project" data-clear-btn="true" maxlength="4" value="" placeholder="Enter project points here">
+                <label for="final">Final:</label>
+                <input type="text" id="final_prof" data-theme="c">
+              </div>
+              <div style="margin-left:4.5rem">
+                <input type="button" id="computeGrade" data-role="button" data-theme="b" data-inline="true" data-icon="check" value="Compute Grade">
               </div>
               <div data-role="fieldcontain">
-                <label for="final">Final</label>
-                <input type="number" name="final" id="final" data-clear-btn="true" maxlength="4" value="" placeholder="Enter final points here">
+                <label>Final Grade:</label>
+                <input type="text" id="finalgrade_prof" data-theme="c">
               </div>
-              <p style="text-align: center;">
-                <a href="#" id="computeGrade" data-role="button" data-icon="check">Compute Grade</a>
-              </p>
-              <p class="final grade">
-                <label>Final Grade</label>
-                <span id="finalgrade">TBD</span>
-              </p>
             </form>
           </div>
-        </div>
 
+        </div>
 
         <div data-role="page" class="" id="settingsPage" data-add-back-btn="true" >
           <div data-role="header" class="">
@@ -179,12 +178,6 @@
             <h1>Grade - Settings</h1>
           </div>
           <div data-role="content" class="">
-            <form>
-              <input type="number" name="gradeCutOff" id="gradeCutOff" value="" placeholder="Grade Cutoff at">
-              <p style="text-align: center;">
-                <a href="#" id='saveSettings' data-role="button" data-inline="true" data-icon="check">Save</a>
-              </p>
-            </form>
             <br>
             <label id="configure_points"><b>Configure Points<b></label>
               <hr>
