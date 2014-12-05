@@ -115,6 +115,12 @@
 
           <div data-role="content" class="">
             <form>
+              <div id="computeSuccessId" style="display:none;">
+                <h2 style="color:white;" id="error" data-icon="check" class="toast">Grade computed</h2>
+              </div>
+              <div id="computeError" style="display:none;">
+                 <h2 style="color:red;" id="compute_error" class="toast">Error computing grade/h2>
+              </div>
               <div data-role="fieldcontain">
                 <label for="firstname">First Name:</label>
                 <input type="text" id="firstname_prof"  name="firstname" data-theme="c" readonly>
