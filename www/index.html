@@ -46,12 +46,15 @@
           </div>
           <div data-role="content" class="">
             <form>
+              <div id="displayError" style="display:none;">
+                 <h2 style="color:red;" id="display_error" class="toast">Error! Try again later</h2>
+              </div>
               <div data-role="fieldcontain">
                 <label for="firstname">First Name:</label>
                 <input type="text" id="firstname"  name="firstname" data-theme="c" readonly>
               </div>
               <div data-role="fieldcontain">
-                <label for=>Last Name:</label>
+                <label for="lastname">Last Name:</label>
                 <input type="text" id="lastname" data-theme="c" readonly>
               </div>
               <div data-role="fieldcontain">
@@ -94,6 +97,9 @@
                 <label for="final">Final:</label>
                 <input type="text" id="final" data-theme="c" readonly>
               </div>
+              <div style="margin-left:4.5rem">
+                <input type="button" id="showGrade" data-role="button" data-theme="b" data-inline="true" data-icon="check" value="Show Grade">
+              </div>
               <div data-role="fieldcontain">
                 <label>Final Grade:</label>
                 <input type="text" id="finalgrade" data-theme="c" readonly>
@@ -119,7 +125,7 @@
                 <h2 style="color:white;" id="error" data-icon="check" class="toast">Grade computed</h2>
               </div>
               <div id="computeError" style="display:none;">
-                 <h2 style="color:red;" id="compute_error" class="toast">Error computing grade/h2>
+                 <h2 style="color:red;" id="compute_error" class="toast">Error! Try again later</h2>
               </div>
               <div data-role="fieldcontain">
                 <label for="firstname">First Name:</label>

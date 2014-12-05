@@ -238,6 +238,62 @@
               });
  }
 
+ var displayGrade = function()
+ {
+   var $student_id = $('id-info').val();
+   var $homework_points = $('#homeworks').val();
+   var $labs_points = $('#labs').val();
+   var $project_points = $('#project').val();
+   var $mid_points = $('#midterm').val();
+   var $pres_points = $('#presentation').val();
+   var $final_points = $('#final').val();
+
+    $.getJSON('http://poojaindi.com/project/validate_grades.php?callback=?',
+   'class_id=235',function(result){
+              if(result.error)
+              {
+                //error
+                $('#error').text(result.error);
+                $('#displayError').css('display','block');
+                $('.toast').fadeIn(400).delay(3000).fadeOut(400);
+              }
+              else
+              {
+                  var homework_max = parseInt(result.homework_max);
+                  var labs_max = parseInt(result.labs_max);
+                  var project_max = parseInt(result.project_max);
+                  var presentation_max = parseInt(result.presentation_max);
+                  var midterm_max = parseInt(result.midterm_max);
+                  var final_max = parseInt(result.final_max);
+                  var homework_sf = parseInt(result.homework_sf)/100;
+                  var labs_sf = parseInt(result.labs_sf)/100;
+                  var project_sf = parseInt(result.project_sf)/100;
+                  var presentation_sf = parseInt(result.presentation_sf)/100;
+                  var midterm_sf = parseInt(result.midterm_sf)/100;
+                  var final_sf = parseInt(result.final_sf)/100;
+                  var grade_a_min = parseInt(result.grade_a_min);
+                  var grade_b_min = parseInt(result.grade_b_min);
+                  var grade_c_min = parseInt(result.grade_c_min);
+                  var grade_d_min = parseInt(result.grade_d_min);
+                  var student_grade = (((parseInt($homework_points)/homework_max)*homework_sf)+((parseInt($labs_points)/labs_max)*labs_sf)+((parseInt($project_points)/project_max)*project_sf)+((parseInt($pres_points)/presentation_max)*presentation_sf)
+                                              +((parseInt($mid_points)/midterm_max)*midterm_sf)+((parseInt($final_points)/final_max)*final_sf))*100;
+                  window.alert(student_grade);
+                  if(parseInt(student_grade) >= parseInt(grade_a_min)){
+                      $('#finalgrade').val("A");
+                  }else if(parseInt(student_grade) >= parseInt(grade_b_min)){
+                      $('#finalgrade').val("B");
+                  }else if(parseInt(student_grade) >= parseInt(grade_c_min)){
+                      $('#finalgrade').val("C");
+                  }else if(parseInt(student_grade) >= parseInt(grade_d_min)){
+                      $('#finalgrade').val("D");
+                  }else{
+                      $('#finalgrade').val("F");
+                  }
+
+                  window.location.href='#studentMainPage';
+              }
+            });
+}
  // Setup the event handlers
  $( document ).on( "ready", function(){
 
@@ -245,6 +301,7 @@
                   $('#settingsButton').on('click', getConfigurations);
                   $('#saveButton').on('click',saveDetails);
                   $('#computeGrade').on('click',calculateGrade);
+                  $('#showGrade').on('click',displayGrade);
                   });
 
  // Load plugin
