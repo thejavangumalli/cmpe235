@@ -8,7 +8,9 @@ $project_points = $_GET['project_points'];
 $pres_points = $_GET['pres_points'];
 $mid_points = $_GET['mid_points'];
 $final_points = $_GET['final_points'];
-
+$myfile = fopen("file.txt", w);
+fwrite($myfile,$project_points);
+fwrite($myfile,$pres_points);
 $query="UPDATE student_grade SET homeworks=".$homework_points
 		.",labs=".$labs_points
       	.",project=".$project_points
@@ -18,6 +20,9 @@ $query="UPDATE student_grade SET homeworks=".$homework_points
       	." where class_id =".$class_id
       	." and student_id =".$student_id ;
 $result = $conn->query($query);
+fwrite($myfile,$query);
+fwrite($myfile,$result);
+fclose($myfile);
 if($result>0)
 {
   $array = array(

@@ -202,14 +202,13 @@
                     $('.toast').fadeIn(400).delay(3000).fadeOut(400);
                   }
                   else
-                  {
+                  { 
                     $.getJSON('http://poojaindi.com/project/save-grades.php?callback=?',
-                    'class_id=235&student_id='+$student_id+'&homework_points='+$homework_points+'&labs_points='+$labs_points+'&project_points='+$project_points+'pres_points='+$pres_points+'&mid_points='+$mid_points+'&final_points='+$final_points,function(result){
+                    'class_id=235&student_id='+$student_id+'&homework_points='+$homework_points+'&labs_points='+$labs_points+'&project_points='+$project_points+'&pres_points='+$pres_points+'&mid_points='+$mid_points+'&final_points='+$final_points,function(result){
                       if(result.msg)
                       {   
                           var student_grade = (((parseInt($homework_points)/homework_max)*homework_sf)+((parseInt($labs_points)/labs_max)*labs_sf)+((parseInt($project_points)/project_max)*project_sf)+((parseInt($pres_points)/presentation_max)*presentation_sf)
                                               +((parseInt($mid_points)/midterm_max)*midterm_sf)+((parseInt($final_points)/final_max)*final_sf))*100;
-                          window.alert(student_grade);
                           if(parseInt(student_grade) >= parseInt(grade_a_min)){
                             $('#finalgrade_prof').val("A");
                           }else if(parseInt(student_grade) >= parseInt(grade_b_min)){
@@ -277,7 +276,6 @@
                   var grade_d_min = parseInt(result.grade_d_min);
                   var student_grade = (((parseInt($homework_points)/homework_max)*homework_sf)+((parseInt($labs_points)/labs_max)*labs_sf)+((parseInt($project_points)/project_max)*project_sf)+((parseInt($pres_points)/presentation_max)*presentation_sf)
                                               +((parseInt($mid_points)/midterm_max)*midterm_sf)+((parseInt($final_points)/final_max)*final_sf))*100;
-                  window.alert(student_grade);
                   if(parseInt(student_grade) >= parseInt(grade_a_min)){
                       $('#finalgrade').val("A");
                   }else if(parseInt(student_grade) >= parseInt(grade_b_min)){
